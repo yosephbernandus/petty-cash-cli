@@ -11,4 +11,10 @@
      python311Packages.pip
      pdm
    ];
+
+   GIT_EDITOR = "${pkgs.neovim}/bin/nvim";
+   shellHook = ''
+       pdm install
+       pre-commit install
+   '';
 }
